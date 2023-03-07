@@ -12,7 +12,7 @@ const listRoute = require("./routes/lists");
 dotenv.config();
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
+app.use(express.static(path.join(__dirname, "dist")));
 app.use(
   cors({
     origin: "*",
