@@ -19,7 +19,7 @@ app.use(
     credentials: true,
   })
 );
-const mypath = path.join(__dirname, "../frontend/dist");
+const mypath = path.join(__dirname, "dist");
 console.log(mypath);
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
@@ -58,7 +58,7 @@ const connectDB = async () => {
 
 // Serve the React app for all other routes
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 app.get("/test", (req, res) => {
